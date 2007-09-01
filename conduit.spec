@@ -3,17 +3,26 @@ Summary(pl.UTF-8):	Synchronizacja dla GNOME
 Name:		conduit
 Version:	0.3.3
 Release:	1
-License:	- (enter GPL/GPL v2/LGPL/BSD/BSD-like/other license name here)
+License:	GPL v2
 Group:		X11/Applications
 Source0:	http://files.conduit-project.org/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	03737db54a5682c972a601b5c15e504a
 URL:		http://www.conduit-project.org/
-BuildRequires:	evolution-python
+BuildRequires:	dbus-devel >= 0.93
+BuildRequires:	pkgconfig
+BuildRequires:	python >= 1:2.4
 BuildRequires:	python-dateutil
-BuildRequires:	python-pygoocanvas
+BuildRequires:	python-pygoocanvas >= 0.8.0
+BuildRequires:	python-pygtk-devel >= 2:2.10
 BuildRequires:	python-vobject
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
+%pyrequires_eq	python-modules
+Requires:	evolution-python >= 0.0.3
+Requires:	python-dateutil
+Requires:	python-pygoocanvas >= 0.8.0
+Requires:	python-pygtk-gtk >= 2:2.10
+Requires:	python-vobject
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
