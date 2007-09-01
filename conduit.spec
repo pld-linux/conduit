@@ -18,8 +18,8 @@ BuildRequires:	python-vobject
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
-Requires:	evolution-python >= 0.0.3
 Requires:	python-dateutil
+Requires:	python-evolution >= 0.0.3
 Requires:	python-pygoocanvas >= 0.8.0
 Requires:	python-pygtk-gtk >= 2:2.10
 Requires:	python-vobject
