@@ -1,67 +1,46 @@
-#
-Summary:	Synchronization for Gnome
+Summary:	Synchronization for GNOME
+Summary(pl.UTF-8):	Synchronizacja dla GNOME
 Name:		conduit
 Version:	0.3.3
 Release:	1
 License:	- (enter GPL/GPL v2/LGPL/BSD/BSD-like/other license name here)
-Group:		Applications
+Group:		X11/Applications
 Source0:	http://files.conduit-project.org/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	03737db54a5682c972a601b5c15e504a
 URL:		http://www.conduit-project.org/
-#BuildRequires:	autoconf
-#BuildRequires:	automake
 BuildRequires:	evolution-python
-#BuildRequires:	intltool
-#BuildRequires:	libtool
 BuildRequires:	python-dateutil
 BuildRequires:	python-pygoocanvas
 BuildRequires:	python-vobject
-#Requires(postun):	-
-#Requires(pre,post):	-
-#Requires(preun):	-
-#Requires:	-
-#Provides:	-
-#Provides:	group(foo)
-#Provides:	user(foo)
-#Obsoletes:	-
-#Conflicts:	-
-#BuildArch:	noarch
-#ExclusiveArch:	%{ix86}
+BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Conduit is a synchronization solution for GNOME which allows the user
+to take their emails, files, bookmarks, and any other type of personal
+information and synchronize that data with another computer, an online
+service, or even another electronic device.
 
-%package libs
-Summary:	-
-Summary(pl):	-
-Group:		Libraries
+Conduit manages the synchronization and conversion of data into other
+formats. For example, conduit allows you to;
+ - Synchronize your tomboy notes to a file on a remote computer
+ - Synchronize your emails to your mobile phone
+ - Synchronize your bookmarks to delicious, gmail, or even your own
+   webserver
 
-%description libs
+%description -l pl.UTF-8
+Conduit to narzędzie do synchronizacji dla GNOME, pozwalające
+użytkownikowi pobierać swoje listy elektroniczne, pliki, zakładki i
+inne rodzaje informacji osobistych oraz synchronizować te dane z innym
+komputerem, usługą online albo nawet innym urządzeniem elektronicznym.
 
-
-%package devel
-Summary:	Header files for ... library
-Summary(pl):	Pliki nag��wkowe biblioteki ...
-Group:		Development/Libraries
-#Requires:	%{name} = %{version}-%{release}
-
-%description devel
-This is the package containing the header files for ... library.
-
-%description devel -l pl
-Ten pakiet zawiera pliki nag
-
-%package static
-Summary:	Static ... library
-Summary(pl):	Statyczna biblioteka ...
-Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
-
-%description static
-Static ... library.
-
-%description static -l pl
-Statyczna biblioteka ....
+Conduit zarządza synchronizacją i konwersją danych do innych formatów.
+Pozwala na przykład:
+ - synchronizować notatki tomboya z plikiem na zdalnym komputerze
+ - synchronizować listy elektroniczne z telefonem komórkowym
+ - synchronizować zakładki z delicious, gmailem albo nawet własnym
+   serwerem WWW
 
 %prep
 %setup -q
@@ -85,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS  ChangeLog NEWS README  TODO
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/start_conduit
 %dir %{_libdir}/conduit
 %{_libdir}/conduit/dataproviders
