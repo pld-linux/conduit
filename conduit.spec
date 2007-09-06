@@ -18,7 +18,7 @@ BuildRequires:	python-vobject
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
-Requires:   pydoc
+Requires:	pydoc
 Requires:	python-PyXML
 Requires:	python-dateutil
 Requires:	python-evolution >= 0.0.3
