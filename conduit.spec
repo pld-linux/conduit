@@ -16,7 +16,10 @@ BuildRequires:	python-pygoocanvas >= 0.8.0
 BuildRequires:	python-pygtk-devel >= 2:2.10
 BuildRequires:	python-vobject
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(find_lang) >= 1.23
+BuildRequires:	rpmbuild(macros) >= 1.311
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
 %pyrequires_eq	python-modules
 Requires:	pydoc
 Requires:	python-PyXML
@@ -69,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %py_postclean
 
-%find_lang %{name} --with-gnome
+%find_lang %{name} --with-gnome --with-omf
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -96,8 +99,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome/autostart/*.desktop
 %{_iconsdir}/hicolor/*/*/*.png
 %{_iconsdir}/hicolor/*/*/*.svg
-%dir %{_omf_dest_dir}/conduit
-%{_omf_dest_dir}/conduit/conduit-C.omf
 %dir %{py_sitescriptdir}/conduit
 %{py_sitescriptdir}/conduit/*.py[co]
 %dir %{py_sitescriptdir}/conduit/datatypes
