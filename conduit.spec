@@ -1,12 +1,12 @@
 Summary:	Synchronization for GNOME
 Summary(pl.UTF-8):	Synchronizacja dla GNOME
 Name:		conduit
-Version:	0.3.4
+Version:	0.3.5
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://files.conduit-project.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	0cb7f2566d1221f01390a35fdfcc84b3
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/conduit/0.3/%{name}-%{version}.tar.bz2
+# Source0-md5:	19b0b28ba18694643f70646a40f88c80
 URL:		http://www.conduit-project.org/
 BuildRequires:	dbus-devel >= 0.93
 BuildRequires:	pkgconfig
@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/conduit-client
 %attr(755,root,root) %{_bindir}/conduit.real
 %dir %{_libdir}/conduit
-%{_libdir}/conduit/dataproviders
+%{_libdir}/conduit/modules
 %{_desktopdir}/conduit.desktop
 %dir %{_datadir}/conduit
 %{_datadir}/conduit/*.png
@@ -101,8 +101,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/*/*/*.svg
 %dir %{py_sitescriptdir}/conduit
 %{py_sitescriptdir}/conduit/*.py[co]
+%dir %{py_sitescriptdir}/conduit/dataproviders
+%{py_sitescriptdir}/conduit/dataproviders/*.py[co]
 %dir %{py_sitescriptdir}/conduit/datatypes
 %{py_sitescriptdir}/conduit/datatypes/*.py[co]
+%dir %{py_sitescriptdir}/conduit/gtkui
+%{py_sitescriptdir}/conduit/gtkui/*.py[co]
+%dir %{py_sitescriptdir}/conduit/hildonui
+%{py_sitescriptdir}/conduit/hildonui/*.py[co]
 
 #%files devel
 %{_pkgconfigdir}/conduit.pc
