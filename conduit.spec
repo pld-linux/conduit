@@ -1,12 +1,12 @@
 Summary:	Synchronization for GNOME
 Summary(pl.UTF-8):	Synchronizacja dla GNOME
 Name:		conduit
-Version:	0.3.9
-Release:	2
+Version:	0.3.10
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/conduit/0.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	83bccb663bb447b265d61b6b860a2cec
+# Source0-md5:	cce2897a7c068daeeb8f284d3193a01d
 URL:		http://www.conduit-project.org/
 BuildRequires:	dbus-devel >= 0.93
 BuildRequires:	pkgconfig
@@ -111,6 +111,8 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/conduit/gtkui/*.py[co]
 %dir %{py_sitescriptdir}/conduit/hildonui
 %{py_sitescriptdir}/conduit/hildonui/*.py[co]
+%dir %{py_sitescriptdir}/conduit/utils
+%{py_sitescriptdir}/conduit/utils/*.py[co]
 
 #%files devel
 %{_pkgconfigdir}/conduit.pc
