@@ -24,7 +24,7 @@ Requires(post,postun):	hicolor-icon-theme
 Requires:	pydoc
 Requires:	python-PyXML
 Requires:	python-dateutil
-Requires:	python-evolution >= 0.0.3
+Requires:	python-gnome-desktop-evolution
 Requires:	python-gdata
 Requires:	python-pygoocanvas >= 0.8.0
 Requires:	python-pygtk-gtk >= 2:2.10
