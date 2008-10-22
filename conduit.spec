@@ -1,12 +1,12 @@
 Summary:	Synchronization for GNOME
 Summary(pl.UTF-8):	Synchronizacja dla GNOME
 Name:		conduit
-Version:	0.3.14
-Release:	2
+Version:	0.3.15
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/conduit/0.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	9ab9a5fdac99230a7747330264f60102
+# Source0-md5:	97c4f281cca4f0948181e6bbf4d82c4b
 URL:		http://www.conduit-project.org/
 BuildRequires:	dbus-devel >= 0.93
 BuildRequires:	pkgconfig
