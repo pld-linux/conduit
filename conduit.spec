@@ -9,9 +9,14 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/conduit/0.3/%{name}-%{version}.t
 # Source0-md5:	0c94b2b980e26ea71a470683bbd6a45f
 URL:		http://www.conduit-project.org/
 BuildRequires:	dbus-devel >= 0.93
+BuildRequires:	docbook-dtd412-xml
+BuildRequires:	gettext-devel
+BuildRequires:	gnome-doc-utils
+BuildRequires:	intltool
 BuildRequires:	pkgconfig
 BuildRequires:	python >= 1:2.4
 BuildRequires:	python-dateutil
+BuildRequires:	python-dbus
 BuildRequires:	python-pygoocanvas >= 0.8.0
 BuildRequires:	python-pygtk-devel >= 2:2.10
 BuildRequires:	python-vobject
@@ -24,8 +29,8 @@ Requires(post,postun):	hicolor-icon-theme
 Requires:	pydoc
 Requires:	python-PyXML
 Requires:	python-dateutil
-Requires:	python-gnome-desktop-evolution
 Requires:	python-gdata
+Requires:	python-gnome-desktop-evolution
 Requires:	python-pygoocanvas >= 0.8.0
 Requires:	python-pygtk-gtk >= 2:2.10
 Requires:	python-vobject
